@@ -3,7 +3,7 @@ Prerequisites:
    1. jdk 1.8 should be installed.
    2. Maven should be installed.
 
-- Overview of your design:
+- Overview of design:
 
   Technology stack is following:
    
