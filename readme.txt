@@ -8,15 +8,15 @@ Prerequisites:
   Technology stack is following:
    
   Java 1.8
-  Maven 
-  Spring-boot
-  Spring-jpa
+  Maven 3
+  Spring Boot
+  Spring JPA
   Hsqldb
   Swagger
   
 - The reason why I choose java as programming language because this is my primary programming language 
 
-  Spring-Boot and other spring modules used in my implementations is easy to use and POC projects can be implemented in short time of period. 
+  Spring Boot, Spring JPA makes it easy to create stand-alone application for POC projects most Spring Boot applications need very little Spring configuration.
 
   For persistence layer I have used Spring-JPA and Hibernate and Hsqldb because It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables
    
