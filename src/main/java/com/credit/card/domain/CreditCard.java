@@ -86,6 +86,14 @@ public class CreditCard implements Serializable, Comparable<CreditCard> {
     }
 
     /**
+     *
+     * @return
+     */
+    public String getLimitAsString() {
+        return Integer.valueOf(limit).toString();
+    }
+
+    /**
      * @return return limit of credit card
      */
     public int getLimit() {

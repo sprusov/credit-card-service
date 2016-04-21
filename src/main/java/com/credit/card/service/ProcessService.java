@@ -27,7 +27,13 @@ public class ProcessService {
             CreditCard creditCard;
             switch (parameters[0].toLowerCase()) {
                 case "add":
-                    creditCard = creditCardService.add(parameters[1], parameters[2], Integer.valueOf(parameters[3].substring(1, parameters[3].length())));
+                    int param3;
+                    if (parameters[3].indexOf("$") == 0) {
+                        param3 = Integer.valueOf(parameters[3].substring(1, parameters[3].length()));
+                    } else {
+                        param3 = Integer.valueOf(parameters[3]);
+                    }
+                    creditCard = creditCardService.add(parameters[1], parameters[2], param3);
                     break;
                 case "charge":
                     creditCard = creditCardService.charge(parameters[1], Integer.valueOf(parameters[2].substring(1, parameters[2].length())));
@@ -36,7 +42,7 @@ public class ProcessService {
                     creditCard = creditCardService.credit(parameters[1], Integer.valueOf(parameters[2].substring(1, parameters[2].length())));
                     break;
                 default:
-                    throw new IllegalArgumentException("operation is incorrect");
+                    throw new IllegalArgumentException("operation are incorrect");
             }
             return creditCard;
         } else {

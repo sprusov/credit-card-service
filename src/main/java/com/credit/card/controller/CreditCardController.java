@@ -1,5 +1,6 @@
 package com.credit.card.controller;
 
+import com.credit.card.domain.CreditCard;
 import com.credit.card.service.ProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,11 +20,9 @@ public class CreditCardController {
     private ProcessService processService;
 
     @CrossOrigin(origins = "http://locahost:8080")
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public ResponseEntity add(@RequestParam(value = "name", required = true) String name,
-                              @RequestParam(value = "number", required = true) String number,
-                              @RequestParam(value = "limit", required = true) String limit) {
-        return new ResponseEntity<>(processService.process("add", name.trim(), number.trim(), limit), HttpStatus.CREATED);
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public ResponseEntity add(@RequestBody CreditCard creditCard) {
+        return new ResponseEntity<>(processService.process("add", creditCard.getName(), creditCard.getNumber(), creditCard.getLimitAsString()), HttpStatus.CREATED);
     }
 
     @CrossOrigin(origins = "http://locahost:8080")
