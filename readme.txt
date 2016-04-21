@@ -1,7 +1,7 @@
 Prerequisites:
 
-   1. jdk 1.8 should be installed.
-   2. Maven should be installed.
+   1. Java 1.8 should be installed.
+   2. Maven 3 should be installed.
 
 - Overview of design:
 
@@ -26,7 +26,7 @@ Prerequisites:
 
 - How to run your code and tests:
 
-  Dependencies will installed by maven.
+  Dependencies will be installed by maven.
 
   To compile and run integration test: 
 
